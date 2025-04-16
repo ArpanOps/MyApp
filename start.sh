@@ -17,12 +17,4 @@ Environment=NODE_ENV=production
 WantedBy=multi-user.target
 EOF
 
-# Reload systemd to pick up new service
-sudo systemctl daemon-reexec
-sudo systemctl daemon-reload
 
-# Enable service to start on boot
-sudo systemctl enable myapp
-
-# Restart the app
-sudo systemctl restart myapp
