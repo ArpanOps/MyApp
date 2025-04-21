@@ -17,4 +17,11 @@ Environment=NODE_ENV=production
 WantedBy=multi-user.target
 EOF
 
+# Reload systemd to recognize the new service
+sudo systemctl daemon-reload
 
+# Enable the service to start on boot
+sudo systemctl enable myapp
+
+# Start the service
+sudo systemctl start myapp
